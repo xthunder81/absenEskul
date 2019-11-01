@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateEktrakurikulersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id_siswa');
-            $table->integer('nis')->unique();
-            $table->string('password');
-            $table->string('nama_siswa');
-            $table->string('kelas');
+        Schema::create('ekstrakurikuler', function (Blueprint $table) {
+            $table->bigIncrements('id_eskul');
+            $table->string('nama_eskul');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('ekstrakurikuler');
     }
 }
