@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSemestersTable extends Migration
+class CreateEktrakurikulersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateSemestersTable extends Migration
      */
     public function up()
     {
-        Schema::create('semester', function (Blueprint $table) {
-            $table->bigIncrements('id_semester');
-            $table->string('nama_semester');
+        Schema::create('ekstrakurikuler', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_eskul');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateSemestersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('semester');
+        Schema::dropIfExists('ekstrakurikuler');
     }
 }

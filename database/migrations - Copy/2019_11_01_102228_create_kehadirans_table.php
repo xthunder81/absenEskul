@@ -14,12 +14,11 @@ class CreateKehadiransTable extends Migration
     public function up()
     {
         Schema::create('kehadiran', function (Blueprint $table) {
-            $table->bigIncrements('id_kehadiran');
-            $table->integer('id_kelas_eskul');
-            $table->integer('id_pengajar');
-            $table->integer('id_semester');
+            $table->bigIncrements('id');
+            $table->integer('kelas_eskul_id');
+            $table->integer('pengajar_id');
+            $table->integer('semester_id');
             $table->dateTime('absen');
-            $table->timestamps();
         });
     }
 

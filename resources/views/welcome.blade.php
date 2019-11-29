@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="links">
-                    <a class = "btn btn-danger btn-lg" href = "">Siswa</a>
+                    <a class = "btn btn-danger btn-lg" href = "{{ url('siswa/home') }}">Siswa</a>
                     <a class = "btn btn-danger btn-lg" href = "">Guru</a>
                 </div>
             </div>

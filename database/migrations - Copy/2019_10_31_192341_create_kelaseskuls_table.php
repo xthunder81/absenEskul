@@ -14,20 +14,18 @@ class CreateKelaseskulsTable extends Migration
     public function up()
     {
         Schema::create('kelaseskul', function (Blueprint $table) {
-            $table->bigIncrements('id_kelas_eskul');
-            $table->integer('id_siswa');
-            $table->integer('id_eskul');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('siswa_id');
+            $table->unsignedBigInteger('eskul_id');
             $table->timestamps();
 
-            // $table->foreign('id_siswa')
-            //         ->references('id_siswa')
-            //         ->on('siswa')
-            //         ->onDelete('cascade');
+            $table->foreign('siswa_id')
+                    ->references('id')
+                    ->on('users');
             
-            // $table->foreign('id_eskul')
-            //         ->references('id_eskul')
-            //         ->on('ekstrakurikuler')
-            //         ->onDelete('cascade');
+            $table->foreign('eskul_id')
+                    ->references('id')
+                    ->on('ekstrakurikuler');
         });
     }
 
