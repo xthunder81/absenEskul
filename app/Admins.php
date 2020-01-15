@@ -6,13 +6,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Admins extends Authenticatable
 {
     //
-    protected $table = 'users';
+    use Notifiable;
+    
+    protected $table = 'admins';
 
     protected $fillable = [
-        'nis', 'password','nama_siswa',
+        'username', 'password',
     ];
 
     protected $hidden = [

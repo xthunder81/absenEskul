@@ -79,13 +79,11 @@
                 </div>
 
                 <div class="links">
-                    <a class = "btn btn-danger btn-lg" href = "">Siswa</a>
+                    <a class = "btn btn-danger btn-lg" href = "{{ route('siswa') }}">Siswa</a>
                     <a class = "btn btn-danger btn-lg" href = "">Guru</a>
                 </div>
             </div>
         </div>
-
-        
 
         <!-- Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" >
