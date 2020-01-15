@@ -21,7 +21,6 @@ Auth::routes();
 Route::get('/siswa', function () {
     return view('siswa/LoginSiswa');
 })->name('siswa');
-// Route::get('siswa/LoginSiswa', 'Siswa\siswaLoginController@index')->name('Login_Siswa');
 Route::post('/login', 'Siswa\siswaLoginController@login')->name('Proses_Login');
 
 // Guru
