@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('depan.land');
 });
+
+Route::get('/landing','depanController@awal');
+
 
 Auth::routes();
 
