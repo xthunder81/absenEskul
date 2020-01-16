@@ -62,7 +62,7 @@
     <body class="text-center">
         
         <div class="flex-center position-ref full-height">
-            <form class="form-signin" action="{{ route('Proses_Login') }}" method="post">
+            <form class="form-signin" action="{{route('Proses_Login')}}" method="post">
                 @csrf
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label for="inputNis" class="sr-only">NIS</label>

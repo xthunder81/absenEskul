@@ -19,16 +19,16 @@ class LoginAdminContoller extends Controller
 
     public function login(Request $request)
     {
-        $user = Admin::where(['username' => $request->username,
+        $admin = Admin::where(['username' => $request->username,
                             'password' => $request->password
                             ])->first();
 
-        if($user) {
-            session(['login_username' => $user->username,
-                    'login_id' => $user->id,
-                    'login_password' => $user->password,
-                    'login_nip' => $user->nip,
-                    'login_nama' => $user->nama_admin,
+        if($admin) {
+            session(['login_username' => $admin->username,
+                    'login_id' => $admin->id,
+                    'login_password' => $admin->password,
+                    'login_nip' => $admin->nip,
+                    'login_nama' => $admin->nama_admin,
             ]);
             $request->session()->flash('status', 'Login Sukses');
             return redirect('/test');
@@ -41,6 +41,6 @@ class LoginAdminContoller extends Controller
 
     function logout(Request $request){
         $request->session()->flush();
-        return redirect();
+        return redirect('/');
    }
 }

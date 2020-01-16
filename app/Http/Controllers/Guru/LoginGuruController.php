@@ -1,33 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Siswa;
+namespace App\Http\Controllers\Guru;
 
-use App\User;
+use App\GuruEskuls;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class SiswaLoginController extends Controller
+class LoginGuruController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-
-    // protected $redirectTo = 'siswa/LoginSiswa';
-    
     public function login(Request $request)
     {
-        $user = User::where(['nis' => $request->nis,
+        $guru = GuruEskuls::where(['nip' => $request->nip,
                             'password' => $request->password
                             ])->first();
 
-        if($user) {
-            session(['login_nis' => $user->nis,
-                    'login_id' => $user->id,
-                    'login_password' => $user->password,
-                    'login_name' => $user->nama_siswa,
-                    'login_kelas' => $user->kelas,
+        if($guru) {
+            session(['login_nip' => $guru->nip,
+                    'login_id' => $guru->id,
+                    'login_password' => $guru->password,
+                    'login_name' => $guru->nama_guru,
             ]);
             $request->session()->flash('status', 'Login Sukses');
             return redirect('/test');

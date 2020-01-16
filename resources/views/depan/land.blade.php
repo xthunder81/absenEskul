@@ -199,8 +199,8 @@
   <section class="content-section bg-primary text-white">
     <div class="container text-center">
       <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-      <a href="{{ route('siswa') }}" class="btn btn-xl btn-light mr-4">Siswa</a>
-      <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+      <a href="{{route('Login_Siswa')}}" class="btn btn-xl btn-light mr-4">Siswa</a>
+      <a href="{{route('Login_Guru')}}" class="btn btn-xl btn-dark">Guru</a>
     </div>
   </section>
 
