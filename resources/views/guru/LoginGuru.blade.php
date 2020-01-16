@@ -62,15 +62,15 @@
     <body class="text-center">
         
         <div class="flex-center position-ref full-height">
-            <form class="form-signin">
+            <form class="form-signin" action="{{ route('Proses_Login_Guru') }}" method="post">
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label for="inputNip" class="sr-only">NIP</label>
-                <input type="nip" id="nip" class="form-control" placeholder="NIP" required="" autofocus="">
+                <input name="nip" type="nip" id="nip" class="form-control" placeholder="NIP" required="" autofocus="">
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="password" class="form-control" placeholder="Password" required="">
+                <input name="password" type="password" id="password" class="form-control" placeholder="Password" required="">
                 <div class="checkbox mb-3">
                 </p>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Sign in</button>
             </form>
         </div>
 

@@ -21,23 +21,25 @@ Route::get('/', function () {
 Auth::routes();
 
 // User
-Route::get('/login_siswa', function () {
+Route::get('/siswa', function () {
     return view('siswa.LoginSiswa');
 })->name('Login_Siswa');
 
-Route::post('/login', 'Siswa\siswaLoginController@login')->name('Proses_Login');
+Route::post('/siswa/siswa_login', 'Siswa\siswaLoginController@login')->name('Proses_Login');
 
 // Guru
-Route::get('/login_guru', function () {
+Route::get('/guru', function () {
     return view('guru.LoginGuru');
 })->name('Login_Guru');
 
+Route::post('/guru/login', 'Guru\LoginGuruController@login')->name('Proses_Login_Guru');
+
 // Admin
-Route::get('/login_admin', function () {
+Route::get('/admin', function () {
     return view('admin.LoginAdmin');
 })->name('Login_Admin');
 
-Route::post('/login', 'Admin\LoginAdminContoller@login')->name('Proses_Login_Admin');
+Route::post('/admin/login', 'Admin\LoginAdminContoller@login')->name('Proses_Login_Admin');
 
 // Test
 Route::get('/test', function () {
