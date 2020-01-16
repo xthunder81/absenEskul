@@ -62,16 +62,16 @@
     <body class="text-center">
         
         <div class="flex-center position-ref full-height">
-            <form class="form-signin" action="{{ route('Proses_Login') }}" method="POST">
+            <form class="form-signin" action="{{ route('Proses_Login') }}" method="post">
                 @csrf
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label for="inputNis" class="sr-only">NIS</label>
-                <input type="nis" id="nis" class="form-control" placeholder="NIS" required="" autofocus="">
+                <input name="nis" type="text" id="nis" class="form-control" placeholder="NIS" required="" autofocus="">
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="password" class="form-control" placeholder="Password" required="">
+                <input name="password" type="password" id="password" class="form-control" placeholder="Password" required="">
                 <div class="checkbox mb-3">
                 </p>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block" value="Login" type="submit">Sign in</button>
             </form>
         </div>
 

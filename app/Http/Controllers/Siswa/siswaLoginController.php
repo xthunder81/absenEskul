@@ -26,11 +26,11 @@ class SiswaLoginController extends Controller
             session(['login_nis' => $user->nis,
                     'login_id' => $user->id,
                     'login_password' => $user->password,
-                    'nama_siswa' => $user->nama_siswa,
-                    'kelas' => $user->kelas,
+                    'login_name' => $user->nama_siswa,
+                    'login_kelas' => $user->kelas,
             ]);
             $request->session()->flash('status', 'Login Sukses');
-            return redirect('/');
+            return redirect('/test');
         }
         else {
             $request->session()->flash('status', 'Masukkan Password dengan Benar!!');

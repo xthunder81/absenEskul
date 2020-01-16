@@ -32,3 +32,9 @@ Route::post('/login', 'Siswa\siswaLoginController@login')->name('Proses_Login');
 Route::get('/admin', function () {
     return view('/admin/LoginAdmin');
 })->name('Login_Admin');
+Route::post('/login', 'Admin\LoginAdminContoller@login')->name('Proses_Login_Admin');
+
+// Test
+Route::get('/test', function () {
+    return view('/admin/layouts/app');
+})->name('test');
