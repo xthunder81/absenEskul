@@ -41,6 +41,8 @@ Route::get('/admin', function () {
 
 Route::post('/admin/login', 'Admin\LoginAdminContoller@login')->name('Proses_Login_Admin');
 
+
+
 // Test
 Route::get('/test', function () {
     return view('admin.layouts.app');
